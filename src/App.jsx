@@ -7,6 +7,7 @@ import VariablesContext from "./context/VariablesContext";
 import { apiLink } from "./utils/variables";
 import UpdateBook from "./components/app/books/updatebook/UpdateBook";
 import DeleteBook from "./components/app/books/deletebook/DeleteBook";
+import { ads_A_ADS } from "./utils/ads";
 
 function App() {
     const [books, setBooks] = useState([]);
@@ -27,6 +28,10 @@ function App() {
         fetchBooks();
         detailsBook();
     }, [updateId, deleteId]);
+
+    useEffect(() => {
+        ads_A_ADS();
+    }, []);
 
     const fetchBooks = async () => {
         try {
