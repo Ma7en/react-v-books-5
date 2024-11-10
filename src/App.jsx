@@ -8,6 +8,7 @@ import { apiLink } from "./utils/variables";
 import UpdateBook from "./components/app/books/updatebook/UpdateBook";
 import DeleteBook from "./components/app/books/deletebook/DeleteBook";
 import { ads_A_ADS } from "./utils/ads";
+import BestChange from "./components/ads/bestchange/BestChange";
 
 function App() {
     const [books, setBooks] = useState([]);
@@ -29,9 +30,12 @@ function App() {
         detailsBook();
     }, [updateId, deleteId]);
 
-    useEffect(() => {
-        ads_A_ADS();
-    }, []);
+    // ads_A_ADS();
+    // useEffect(() => {
+    //     window.open(`${window.location.href}`, "_blank");
+    //     // window.location.href = "https://www.bestchange.com/?p=1313866";
+    //     window.location.href = "google.com";
+    // }, []);
 
     const fetchBooks = async () => {
         try {
@@ -167,6 +171,7 @@ function App() {
                 <CreateBook />
                 <UpdateBook />
                 <DeleteBook />
+                <BestChange />
             </VariablesContext.Provider>
         </>
     );
