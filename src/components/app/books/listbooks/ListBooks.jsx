@@ -93,7 +93,7 @@ function ListBooks() {
                                                         // console.log(`change`);
                                                     }}
                                                 >
-                                                    Change Title
+                                                    Update Book
                                                     <svg
                                                         xmlns="http://www.w3.org/2000/svg"
                                                         fill="none"
